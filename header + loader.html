@@ -1,0 +1,84 @@
+<link rel="stylesheet" type="text/css" href="loader.css">
+
+<body onload="loader()" id="body">
+
+	<script type="text/javascript">
+		
+		function loader() {
+	
+			setTimeout(function(){
+				var d = document.getElementById("body");
+				d.className += " loaded";
+			}, 500);
+		
+		};
+
+	</script>
+
+	<div id="loader-wrapper">
+
+			<div id="loader">
+				
+			</div>
+			<img width="200px" src="./img/logo.png">
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+	</div>
+
+	<div id="main-top">
+            <div id="logo"><img class="avatar" src="./img/logo.png" alt="avatar" title="Imagen de avatar"/></div>
+            
+            <div id="redes">
+            	<form action="search.php" method="POST">
+	            	<input type="text" name="search">
+		            <button id="buscar" type="submit" value="Submit"/>Buscar</button>
+	            </form>
+	            <br>
+	            <div id="conjunto">
+		            <div id="login">
+		            	<button id="login-butt">Login</button>
+		            	<div id="log-form">
+		            		<form action="login.php" method="POST">
+		            			 <input type="text" name="user" placeholder="Usuario..." required>
+		            			 <br>
+		            			 <input type="password" name="pass" placeholder="Contraseña..." required>
+		            			 <br>
+		            			 <button type="submit">Entrar</button>
+		            		</form>
+		            	</div>
+		            </div>
+		            <div id="social">
+			            <button id="face" type="submit" onclick="location.href='http://www.facebook.com';" value="Facebook"/></button>
+			            <button id="twit" type="submit" onclick="location.href='http://www.twitter.com';" value="Twitter"/></button>
+			            <button id="insta" type="submit" onclick="location.href='http://www.instagram.com';" value="Instagram"/></button>
+		            </div>
+	            </div>
+            </div>
+            <div id="menu">
+            	<a href="./home.html">Inicio</a>
+            	<span>|</span>
+            	<a href="./grupos.html">Grupos</a>
+            	<span>|</span>
+            	<a href="./musicos.html">Musicos</a>
+            	<span>|</span>
+            	<a href="./registro.html">Registro</a>
+            </div>
+    </div>
+    <br>
+
+
+body {
+	width: 100%;
+	background-image: url(./img/bg-2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#main-top{
+	background-color: #161616;
+	height: 90px;
+}
