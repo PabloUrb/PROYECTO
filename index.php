@@ -92,24 +92,32 @@ and open the template in the editor.
         </div>
 
         <div id="alto">
-            <div id="uno"><table id="tabla12"><tr id="concierto3">
+            <div id="uno"><table id="tabla12">
 
                         <?php
                         require_once 'php/fun.php';
 
                         $query = getRanking();
-
                         $query2 = array_shift(mysqli_fetch_array($query));
-
+                                
                         foreach ($query as $key => $value) {
-                            extract($value);
-
-                            echo '<tr><td id="concierto3">' . $nombre . '</td></tr>';
+                            extract($value);              
+                                echo '<tr style="height: 0px"><td id="concierto3">' . $nombre . '</td></tr>'; 
                         }
                         ?>
 
                 </table></div>
-            <div id="granconcierto"><h3> gran concierto</h3></div>
+            <div id="granconcierto">
+                <?php
+                require_once 'php/fun.php';
+                $query =  getMejorConcierto();
+                $query2 = array_shift(mysqli_fetch_array($query));
+                foreach ($query as $key => $value) {
+                    extract($value);
+                    echo $nombre;
+                }
+                ?>
+            </div>
         </div>            <div id="publi">
             <h3>publicidad</h3>
         </div>
@@ -120,10 +128,8 @@ and open the template in the editor.
                     require_once 'php/fun.php';
                     $query = getConcierto();
                     extract($value);
-                    $imagen ="tote.jpg";
-                    echo '<td id="tabla"><img id="back-img" src="'.$imagen.'"> <span>'.$nombre. '</span><br><span>' .$fecha.'</span></td>'; 
-                    
-                    
+                    $imagen = "tote.jpg";
+                    echo '<td id="tabla"><img id="back-img" src="' . $imagen . '"> <span>' . $nombre . '</span><br><span>' . $fecha . '</span></td>';
                     ?>
 
                     <!--para poner comentarios-->
