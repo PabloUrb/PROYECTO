@@ -9,4 +9,10 @@ function getRanking(){
     return $query;
     
 }
+function getConcierto(){
+    
+    $con = conectar();
+    $query = mysqli_query($con, 'select concierto.nombre, concierto.fecha from concierto order by fecha asc');
+    return $query;
+}
 ?>

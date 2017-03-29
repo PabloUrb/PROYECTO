@@ -99,11 +99,12 @@ and open the template in the editor.
 
                         $query = getRanking();
 
+                        $query2 = array_shift(mysqli_fetch_array($query));
+
                         foreach ($query as $key => $value) {
                             extract($value);
 
-                            echo '<td id="concierto3">'.$nombre.'</td>';    
-                            
+                            echo '<tr><td id="concierto3">' . $nombre . '</td></tr>';
                         }
                         ?>
 
@@ -115,37 +116,15 @@ and open the template in the editor.
         <div>
             <div id="table">
                 <table id="tabla">
-                    <tr>
-                        <td id="caca1">Diana</td>
-                        <td id="caca2">Kha'Zix</td>
-
-
-                    </tr>
-                    <tr>
-                        <td id="caca4">Diana</td>
-                        <td id="caca5">Kha'Zix</td>
-
-
-                    </tr><tr>
-                        <td id="caca7">Diana</td>
-                        <td id="caca8">Kha'Zix</td>
-
-
-                    </tr><tr>
-                        <td id="caca10">concierto10<br>
-                            jajajjaja</td>
-                        <td id="caca11">concierto11<br>
-                            jajajjaja</td>
-
-
-                    </tr><tr>
-                        <td id="caca13">concierto13<br>
-                            jajajjaja</td>
-                        <td id="caca14">concierto14<br>
-                            jajajjaja</td>
-
-
-                    </tr>
+                    <?php
+                    require_once 'php/fun.php';
+                    $query = getConcierto();
+                    extract($value);
+                    $imagen ="tote.jpg";
+                    echo '<td id="tabla"><img id="back-img" src="'.$imagen.'"> <span>'.$nombre. '</span><br><span>' .$fecha.'</span></td>'; 
+                    
+                    
+                    ?>
 
                     <!--para poner comentarios-->
 

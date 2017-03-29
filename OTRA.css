@@ -118,6 +118,7 @@ body {
     color:white;
     text-align:end; 
     height: 25px;
+    width: 25%;
     background-image: url("zpu.jpg");background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
