@@ -18,6 +18,14 @@ order by valora.val desc limit 4');
     return $query;
     
 }
+function TodosConciertos(){
+    
+    $con = conectar();
+    $query = mysqli_query($con, 'select * from concierto');
+    
+    return $query;
+    
+}
 function getMejorConcierto(){
     
     $con = conectar();
