@@ -1,17 +1,665 @@
-body,html{
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  
-}
-body>div{
-    width: 75%;
-    height: 15%;
-    
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url(./img/bg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
     margin: 0 auto;
-    margin-top: 25%;
 }
+h1{
+    text-align: center;
+    margin-top: 5%;
+    color: white;
+}
+#main-top{
+    background-color: #161616;
+    height: 90px;
+}
+#logo{
+    width: 7%;
+    text-align: center; 
+    display: inline-block;
+}
+#titulo{
+    color:white;
+    display: inline-block;
+    width: 74%;
+    height: 50%;
+    text-align: center;
+    border:2px;
+    border-style:dashed;
+    border-color: greenyellow;
+
+}
+#mierda{
+    height: 40px;
+    width: 100%;
+
+}
+#login{
+    height: 25%;
+    width: 35%;
+    display: inline-block;
+    margin-top: 10px;
+}
+#boton1{
+    border: solid;
+    color: white;
+    border-color: white;
+}
+#boton2{
+    border:2px;
+    border: solid;
+    border-color: white;
+    background-color: grey;
+    color:white;
+    border-radius: 15px;
+}
+#boton3{
+    border:2px;
+    border: solid;
+    border-color: white;
+    background-color: grey;
+    color:white;
+    border-radius: 15px;
+}
+#boton4{
+    border:2px;
+    border: solid;
+    border-color: white;
+    background-color: grey;
+    color:white;
+    border-radius: 15px;
+}
+#botones{
+    height: 100%;
+    width: 35%;
+    text-align: right;
+    display: inline-block;
+    float: right;
+    left: 100%;
+}
+#email{
+    display: inline-block;
+}
+#enviar{
+    display: inline-block;
+    border:2px;
+    border: solid;
+    border-color: white;
+    background-color: grey;
+    color:white;
+    border-radius: 15px;
+}
+
+#redes{
+    width: 17%;
+    display: inline-block;
+    text-align: right;
+}
+#concierto1{ 
+    color:white;
+    margin-top: 0px;
+    text-align: end;
+    height: 25px;
+    background-image: url("tote.jpg");background-size: cover;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+#concierto2{   
+    height: 25px;
+    background-image: url("zatu.jpg");background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    text-align:end;
+    opacity: 0.7;
+}
+#concierto3{
+    color:white;
+    text-align:end; 
+    height: 25px;
+    width: 25%;
+    background-image: url("zpu.jpg");background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+#uno{
+    color:white;
+    display: inline-block !important;
+    width: 35%;
+    height: 100%;
+    opacity: 0.7;
+    position: relative;
+}
+
+#granconcierto{
+    margin-top: 5px;
+    color:white;
+    display: inline-block !important;
+    height: 34%;
+    width: 65%;
+    text-align:end;
+    position: absolute;
+    background-image: url("tote.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+#concierto1:hover{
+    opacity: 1;
+}#concierto2:hover{
+    opacity: 1;
+}#concierto3:hover{
+    opacity: 1;
+}#granconcierto:hover{
+    opacity: 1;
+}
+#alto {
+    width: 100%;
+    color:white;
+    height: 320px;
+}
+#publi{
+    height: 19%;
+    border:2px;
+    border:solid;
+    border-radius: 15px;
+    border-color: #161616;
+    color:white;
+    background-color: #161616;
+    text-align: center;
+}
+#tabla{
+    width: 80%;
+    height: 100%;
+    margin-top: 0px;
+}
+#tabla12{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+}
+#footer{
+    bottom: 0;
+    vertical-align:central;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    float: bottom;
+    line-height: 60px;
+    text-align: left;
+    border:2px;
+    background-color: #161616;
+}#footer1{
+    text-align: center;
+    display: inline-block;
+    float: left;
+    width: 30%;
+}#footer2{
+    display: inline-block;
+    float: right;
+    text-align: center;
+    margin: 2%;
+    color: white;
+}#span{
+    display: inline-block;
+}
+#footer span{
+    padding-left: 20px;
+    color: white;
+
+    font-size: 12px;
+}#tabla1{
+    width: 80%;
+    height: 100%;
+}
+body {
+    font-size: 1em;
+    font-family: batman;
+    background-size: cover;
+}
+
 table{
-   width: 75%;
-    height: 15%; 
+    text-align: center;
+    color:white;
+    margin: auto;
+    margin-top: 5%;
+    width: 75%;
+    border-radius: 15px;
+    border:solid;
+}td{
+
+    border:solid;
+}
+#caca1{
+    background-image: url("tote.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca2{
+    background-image: url("zpu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+    color:white;
+}
+#caca3{
+    background-image: url("zatu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca4{
+    background-image: url("nach.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca5{
+    background-image: url("tote.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca6{
+    background-image: url("zpu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca7{
+    background-image: url("zatu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca8{
+    background-image: url("nach.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+}
+#caca9{
+    background-image: url("tote.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca10{
+    background-image: url("zpu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca11{
+    background-image: url("zatu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca12{
+    background-image: url("nach.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca13{
+    background-image: url("tote.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca14{
+    background-image: url("zpu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#caca15{
+    background-image: url("zatu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;border-radius: 15px;
+    opacity: 0.7;
+    text-align: end;
+}
+#boton1:hover{
+    padding: 5px 10px;
+}#boton2:hover{
+    padding: 5px 10px;
+}#boton3:hover{
+    padding: 5px 10px;
+}#boton4:hover{
+    padding: 5px 10px;
+}#enviar:hover{
+    padding: 5px 10px;
+}
+
+#caca1:hover{
+    opacity: 1;
+}#caca2:hover{
+    opacity: 1;
+}#caca3:hover{
+    opacity: 1;
+}#caca4:hover{
+    opacity: 1;
+}#caca5:hover{
+    opacity: 1;
+}#caca6:hover{
+    opacity: 1;
+}#caca7:hover{
+    opacity: 1;
+}#caca8:hover{
+    opacity: 1;
+}#caca9:hover{
+    opacity: 1;
+}#caca10:hover{
+    opacity: 1;
+}#caca11:hover{
+    opacity: 1;
+}#caca12:hover{
+    opacity: 1;
+}#caca13:hover{
+    opacity: 1;
+}#caca14:hover{
+    opacity: 1;
+}#caca15:hover{
+    opacity: 1;
+}
+#main-top{
+    background-color: #161616;
+    height: 90px;
+}
+#login-butt:hover + #log-form {
+    display: block;
+}
+
+#log-form {
+    display: none;
+    margin-top: -8px;
+    width: 200px;
+    height: 100px;
+    background-color:#303030; 
+    border-radius: 5px;
+}
+
+#log-form form{
+    text-align: center;
+    float: left;
+    position: relative;
+    margin-left: -20px;
+    margin-top: 15px;
+}
+
+#log-form input{
+    width: 70%;
+    /* margin-right: -2px; */
+    margin-left: 28px;
+}
+
+#log-form input{
+    width: 70%;
+    /* margin-right: -2px; */
+    margin-left: 28px;
+}
+
+#log-form button{
+    margin-right: -25px;
+    vertical-align: top;
+    display: inline-block;
+    width: 135px;
+    height: 26px;
+    background-color: rgba(0, 132, 84, 0.3);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 8px;
+}
+
+#log-form:hover {
+    display: block;
+}
+
+#menu {
+    padding-left: 41%;
+    float: right;
+    margin-top: 36px;
+    margin-right: 50px;
+    position: absolute;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    padding: 14px 25px;
+}
+
+#menu a:hover {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+    background-color: #303030;
+}
+
+#menu span {
+    color: white;
+    margin-left: 15px;
+}
+input {
+    display: inline-block;
+    margin:auto; 
+    vertical-align: top;
+    width: 60%;
+    height: 20px;
+    background-color: transparent;
+    font-size: 14px;
+    text-align: left;
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 8px;
+    text-align: center;
+}
+#votar1{
+    height: 100%;
+    width: 100%;
+}
+#algo{
+    height: 15%;
+    width: 25%;
+    color: white;
+
+#titulo{
+
+
+    display: inline-block;
+    width: 30%;
+    height: 50%;
+    text-align: center;
+    border:2px;
+    border-style:dashed;
+    border-color: greenyellow;
+}
+#redes{
+    width: 20%;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#face {
+    background-image: url(./img/Facebook.png);
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+#twit {
+    background-image: url(./img/Twitter.png);
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 0;
+}
+
+#conjunto {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    vertical-align: top;
+    margin-top: -20px;
+    margin-left: 5px;
+}
+
+#login {
+    display: inline-block;
+    margin-top: 5px;
+    width: 49%;
+    height: 50px;
+    vertical-align: top;
+}
+
+#login-butt {
+    vertical-align: top;
+    display: inline-block;
+    width: 135px;
+    height: 26px;
+    background-color: rgba(0, 132, 84, 0.3);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 8px;
+}
+
+#insta {
+    background-image: url(./img/Instagram.png);
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 15px;
+    border: 0;
+}
+
+#buscar {
+    vertical-align: top;
+    display: inline-block;
+    width: 80px;
+    height: 26px;
+    background-color: rgba(0, 132, 84, 0.1);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 8px;
+}
+
+#social {
+    margin: 0;
+    margin-right: 5px;
+    display: inline-block;
+    width: 48%;
+    height: 50px;
+}
+
+#br {
+    display: block;
+    margin: 20px 0;
+}
+
+.avatar {
+    top: -10px;
+    margin-left: 20px;
+    width: 28%;
+    height: 28%;
+    display: inline-block;
+    float: left;
+}
+
+#logo{
+    width: 40%;
+    float: left;
+    text-align: center; 
+    display: inline-block;
+}
+
+h1 {
+
+    font-size: 25px;
+
+}
+tr{
+    height: 0px !important;
+}
+
+button {
+    cursor: pointer !important;
+    vertical-align: top;
+    display: inline-block;
+    width: 80px;
+    height: 26px;
+    background-color: rgba(0, 132, 84, 0.1);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 8px;
+}
+a{
+    margin-top: 4%;
 }

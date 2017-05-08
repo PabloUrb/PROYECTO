@@ -11,7 +11,7 @@ and open the template in the editor.
         <title>VOTAR CONCIERTO</title>
     </head>
     <body>
-        <div id="votar1"><h1>Vota el concierto si te ha gustado</h1>
+        <div id="votar1"><h1>Vota el musico si te ha gustado</h1>
             <?php
             require_once 'php/fun.php';
             session_start();
@@ -21,7 +21,7 @@ and open the template in the editor.
             require_once 'php/fun.php';
             echo "<form action='' method='POST'>";
 
-            $query = TodosConciertos();
+            $query = TodosMusicos();
             $query2 = array_shift(mysqli_fetch_array($query));
             ?>
             </div>
@@ -33,28 +33,28 @@ require_once 'php/fun.php';
 if (isset($_POST["boton1"])) {
     // $user = $_SESSION["user"];
     $user = "hola2";
-    $id_concierto = $_POST["id_concierto"];
-    if (revisar($id_concierto, $user)==false) {
-        votar($id_concierto, $user);
+    $musico_username = $_POST["musico_username"];
+    if (revisar($musico_username, $user)==false) {
+        votar($musico_username);
         
     } 
 }
 
 
 
-$query = TodosConciertos();
+$query = TodosMusicos();
 
 $query2 = array_shift(mysqli_fetch_array($query));
 echo '<table>';
-echo '<tr><td>' . 'Nombre' . '</td><td>' . 'fecha' . '</td><td>' . 'desc' . '</td><td>' . 'id_estilo' . '</td><td>' . 'id_ciudad' . '</td><td>' . 'votar' . '</td><td>' . 'puntos' . '</td></tr>';
+echo '<tr><td>' . 'nombrec' . '</td><td>' . 'nombreg' . '</td><td>' . 'nombrea' . '</td><td>' . 'web' . '</td><td>' . 'telef' . '</td><td>' . 'votar' . '</td><td>' . 'puntos' . '</td></tr>';
 echo '</table>';
 foreach ($query as $key => $value) {
     extract($value);
-    $suma = suma($id_concierto);
+    $suma = sumamusico($musico_username);
     extract(mysqli_fetch_array($suma));
     echo '<form action="" method="POST">';
     echo '<table>';
-    echo '<tr><td>' . $nombre . '<input name="id_concierto" value=' . $id_concierto . '" style="display:none"></td><td>' . $fecha . '</td><td>' . $desc . '</td><td>' . $id_estilo . '</td><td>' . $id_ciudad . '</td><td>' . '<input type="submit"  name="boton1" class="button" value="VOTAR">' . '</td><td>' . $sum . '</td></tr></form>';
+    echo '<tr><td>' . $nombrec . '<input name="musico_username" value=' . $musico_username . '" style="display:none"></td><td>' . $nombreg . '</td><td>' . $nombrea . '</td><td>' . $web . '</td><td>' . $telef . '</td><td>' . '<input type="submit"  name="boton1" class="button" value="VOTAR">' . '</td><td>' . $sum . '</td></tr></form>';
     echo '</table>';
 }
 ?>
