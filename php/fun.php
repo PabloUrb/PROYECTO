@@ -59,9 +59,9 @@ function votar($id_concierto, $user){
     return $query;
     
 }
-function votarmusico($musico_username){
+function votarmusico($musico_username,$user){
     $con = conectar();
-    $query=  mysqli_query($con, "insert into musico (musico_username, val) values ('".$musico_username."',1)");
+    $query=  mysqli_query($con, "insert into valora (fan_username, musico_username, val) values ('$user','$musico_username',1)");
     return $query;
     
 }
@@ -72,12 +72,24 @@ function suma($id_concierto){
 }
 function sumamusico($musico_username){
     $con = conectar();
-    $query=  mysqli_query($con, "select sum(val) as sum from musico where musico_username='$musico_username'");
+    $query=  mysqli_query($con, "select sum(val) as sum from valora where musico_username='$musico_username'");
     return $query;
 }
 function revisar($id_concierto, $user){
     $con = conectar();
     $query=  "SELECT * FROM valora where fan_username = '$user' and id_concierto = '$id_concierto'";
+    $resultado = mysqli_query($con, $query);
+    $filas = mysqli_num_rows($resultado);
+    
+    if ($filas > 0) {
+        return true;
+    } else {    // Este else no hace falta
+        return false;
+    }
+}
+function revisarmusico($musico_username, $user){
+    $con = conectar();
+    $query=  "SELECT * FROM valora where fan_username = '$user' and musico_username = '$musico_username'";
     $resultado = mysqli_query($con, $query);
     $filas = mysqli_num_rows($resultado);
     

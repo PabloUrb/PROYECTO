@@ -32,7 +32,7 @@ require_once 'php/fun.php';
 
 if (isset($_POST["boton1"])) {
     // $user = $_SESSION["user"];
-    $user = "hola2";
+    $user = "hola3";
     $id_concierto = $_POST["id_concierto"];
     if (revisar($id_concierto, $user)==false) {
         votar($id_concierto, $user);
