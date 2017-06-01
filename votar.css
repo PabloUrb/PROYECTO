@@ -9,6 +9,117 @@ body {
     margin: 0;
     margin: 0 auto;
 }
+#concierto {
+	position: relative;
+	margin: 0 auto;
+	background-color: red;
+	border-radius: 10px;
+	width: 60%;
+	height: 150px;
+	margin: auto;
+    vertical-align: top;
+    display: block;
+    background-color:  rgba(0, 7, 0, 0.5);
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+#select {
+	margin: auto;
+    vertical-align: top;
+    display: block;
+    width: 80%;
+    height: 20px;
+    background-color: transparent;
+    font-size: 14px;
+    text-align: left;
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 8px;
+    padding-left: 15px;
+}
+
+#musico {
+	position: relative;
+	margin: 0 auto;
+	border-radius: 10px;
+	width: 60%;
+	height: 150px;
+	margin: auto;
+    vertical-align: top;
+    display: block;
+    background-color:  rgba(0, 7, 0, 0.5);
+    color: white;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 1px 1px 3px black;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+#link-butt {
+	display: inline-block;
+	vertical-align: top;
+	height: 40px;
+	width: 120px;
+	background-color: rgba(0, 132, 84, 0.1);
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	border: 3px;
+	border-style: solid;
+	border-color: white;
+	box-shadow: 1px 1px 3px black;
+	border-radius: 10px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#concierto-img {
+	width: 36%;
+	height: 150px;
+	margin-right: 20px;
+	border-radius: 10px;
+	display: inline-block;
+	float: left;
+	margin-left: -13px;
+}
+
+#concierto-info {
+	width: 60%;
+	height: 150px;
+	text-align: left;
+	border-radius: 10px;
+	display: inline-block;
+	float: left;
+}
+
+#concierto-info p {
+	margin-top: 0;
+}
+
+#concierto-info h2 {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+#concierto-img img {
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+
 h1{
     text-align: center;
     margin-top: 5%;
@@ -226,17 +337,22 @@ body {
     font-family: batman;
     background-size: cover;
 }
-
+#table1{
+    text-align: center;
+    color:white;
+    margin: auto;
+    margin-top: 11%;
+    width: 75%;
+    border-radius: 15px;
+    border:solid;
+}
 table{
     text-align: center;
     color:white;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     width: 75%;
     border-radius: 15px;
-    border:solid;
-}td{
-
     border:solid;
 }
 #caca1{
@@ -418,17 +534,7 @@ table{
     margin-top: 15px;
 }
 
-#log-form input{
-    width: 70%;
-    /* margin-right: -2px; */
-    margin-left: 28px;
-}
 
-#log-form input{
-    width: 70%;
-    /* margin-right: -2px; */
-    margin-left: 28px;
-}
 
 #log-form button{
     margin-right: -25px;
@@ -478,23 +584,7 @@ table{
     color: white;
     margin-left: 15px;
 }
-input {
-    display: inline-block;
-    margin:auto; 
-    vertical-align: top;
-    width: 60%;
-    height: 20px;
-    background-color: transparent;
-    font-size: 14px;
-    text-align: left;
-    color: white;
-    border: 2px;
-    border-style: solid;
-    border-color: white;
-    box-shadow: 1px 1px 3px black;
-    border-radius: 8px;
-    text-align: center;
-}
+
 #votar1{
     height: 100%;
     width: 100%;
