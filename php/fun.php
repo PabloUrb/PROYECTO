@@ -33,6 +33,13 @@ function TodosConciertosFuturos(){
     return $query;
     
 }
+function ConciertosApuntados($musico_username){
+    $con = conectar();
+    $query = mysqli_query($con, "SELECT * FROM concierto where local_username =(select local_username from local where nombrec = (select nombrec from musico where musico_username = '$musico_username'))");
+    
+    return $query;
+    
+}
 function TodosMusicos(){
     
     $con = conectar();
