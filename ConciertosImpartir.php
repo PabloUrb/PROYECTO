@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <meta charset="UTF-8">
         <link href="votar.css" rel="stylesheet" type="text/css"/>
-        <title>VOTAR CONCIERTO</title>
+        <title>Futuros conciertos</title>
     </head>
     <body> <?php
         session_start();
@@ -19,7 +15,7 @@ and open the template in the editor.
 
             require_once 'php/fun.php';
 // Si ha pulsado borrar
-            ?><div id="votar1"><h1>Conciertos a los que estas apuntado</h1>
+            ?><div id="votar1"><h1 id="tituloss">Futuros conciertos a impartir</h1>
                 <div id="algo">
                     <?php
                     require_once 'php/fun.php';

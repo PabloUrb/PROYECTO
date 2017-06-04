@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link href="votar.css" rel="stylesheet" type="text/css"/>
-        <title>VOTAR CONCIERTO</title>
+        <title>VOTAR MUSICO</title>
     </head>
     <body>
         <div id="votar1"><h1>Vota el concierto si te ha gustado</h1>

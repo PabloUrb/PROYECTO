@@ -8,15 +8,15 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link href="votar.css" rel="stylesheet" type="text/css"/>
-        <title>VOTAR CONCIERTO</title>
+        <title>R CONCIERTO</title>
     </head>
 
 
     <body>
-        <div id="votar1"><h1>Vota el concierto si te ha gustado</h1>
+        <div id="tituloss"><h1>Vota el concierto si te ha gustado</h1>
             <?php
             session_start();
-            $_SESSION["user"] = "d";
+            $_SESSION["user"] = "f";
             if (isset($_SESSION["user"])) {
                 require_once 'php/fun.php';
                 ?>
@@ -40,8 +40,8 @@ and open the template in the editor.
                     $musico_username = $_POST["musico_username"];
                     if (revisarmusico($musico_username, $user) == false) {
                         votarmusico($musico_username, $user);
-                    }else{
-                    echo "<script>alert('ya has votado')</script>";
+                    } else {
+                        echo "<script>alert('ya has votado')</script>";
                     }
                 }
                 $query = TodosMusicos();
@@ -65,9 +65,9 @@ and open the template in the editor.
                 ' . "contacto: " . $web . '<br>' . "telefono: " . $telef . '<br>'
                     . 'puntos: ' . $sum . '</p>'
                     . '<input name="musico_username" value=' . $musico_username . ' style="display:none">';
-
+                    echo "</form>";
                     echo'	</div>
-                        echo "</form>";
+                        
 		</div>';
                 }
             } else {

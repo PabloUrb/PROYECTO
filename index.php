@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -11,6 +14,14 @@ and open the template in the editor.
         <link href="OTRA.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="loader.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body onload="loader()" id="body">
 
@@ -69,7 +80,7 @@ and open the template in the editor.
                 </div>
             </div>
             <div id="menu">
-                <a href="./home.html">Inicio</a>
+                <a href="index.php">Inicio</a>
                 <span>|</span>
                 <a href="./grupos.html">Grupos</a>
                 <span>|</span>
@@ -80,67 +91,99 @@ and open the template in the editor.
         </div>
         <br>
 
+    </div>
 
-        <div id="mierda">
-            <div id="login">
-                <button type="submit" value="BOTON1" id="boton1">boton1</button>
-                <button type="submit" value="BOTON2" id="boton2">boton2</button>
-                <button type="submit" value="BOTON3" id="boton3">boton3</button>
-                <button type="submit" value="BOTON4" id="boton4">boton4</button>
-            </div>
+    <div id="alto"><h1>Ranking Conciertos</h1>
+        <div id="uno"><table id="tabla12">
 
-        </div>
-
-        <div id="alto">
-            <div id="uno"><table id="tabla12">
-
-                        <?php
-                        require_once 'php/fun.php';
-
-                        $query = getRanking();
-                        $query2 = array_shift(mysqli_fetch_array($query));
-                                
-                        foreach ($query as $key => $value) {
-                            extract($value);              
-                                echo '<tr style="height: 0px"><td id="concierto3">' . $nombre . '</td></tr>'; 
-                        }
-                        ?>
-
-                </table></div>
-            <div id="granconcierto">
                 <?php
                 require_once 'php/fun.php';
-                $query =  getMejorConcierto();
+
+                $query = getRanking();
                 $query2 = array_shift(mysqli_fetch_array($query));
+
                 foreach ($query as $key => $value) {
                     extract($value);
-                    echo $nombre;
+                    $suma = suma($id_concierto);
+                    extract(mysqli_fetch_array($suma));
+                    echo '<tr style="height: 0px"><td id="concierto3">' . "<h4> " . $nombre . '</h4>' . "Descripcion: " . $desc . "   Ciudad: " . $id_ciudad . "   Puntos: " . $suma . "   Fecha: " . $fecha . '</td></tr>';
                 }
                 ?>
-            </div>
-        </div>            <div id="publi">
-            <h3>publicidad</h3>
+
+            </table></div>
+        <div id="granconcierto">
+            <?php
+            require_once 'php/fun.php';
+            $query = getMejorConcierto();
+            $query2 = array_shift(mysqli_fetch_array($query));
+            foreach ($query as $key => $value) {
+                extract($value);
+                $suma = suma($id_concierto);
+                extract(mysqli_fetch_array($suma));
+                echo "<h2>" . $nombre . "</h2>" . "Descripcion: " . $desc . "<br>" . "Ciudad: " . $id_ciudad . "<br>" . "Puntos: " . $suma . "<br>" . "Fecha: " . $fecha;
+            }
+            ?>
         </div>
-        <div>
-            <div id="table">
-                <table id="tabla">
-                    <?php
-                    require_once 'php/fun.php';
-                    $query = getConcierto();
+    </div>          
+    <div style="width: 100%; height: 100%; margin-top: 30px;"><h1></h1>  
+        <div style="width: 100%; height: 100%;"> 
+            <div style="margin: 0 auto; width: 100%;" id="tabla">
+                <?php
+                require_once 'php/fun.php';
+
+                $query = getConcierto();
+
+                if (isset($_POST["Inscribirse"])) {
+
+                    if (insertarasistencia($_SESSION["user"], $_POST['concierto'])) {
+
+                        header("Location: index.php");
+                    }
+                }
+
+                if (isset($_POST["Desinscribirse"])) {
+
+                    if (quitarasistencia($_SESSION["user"], $_POST['concierto'])) {
+                        header("Location: index.php");
+                    }
+                }
+                
+                foreach ($query as $key => $value) {
                     extract($value);
+
                     $imagen = "tote.jpg";
-                    echo '<td id="tabla"><img id="back-img" src="' . $imagen . '"> <span>' . $nombre . '</span><br><span>' . $fecha . '</span></td>';
-                    ?>
 
-                    <!--para poner comentarios-->
+                    echo '<div style="padding-right: 0px; padding-left: 0px; color: white; height: 250px; border: 2px solid white; border-radius: 10px;" class="col-md-3"><img style="width: 100%; position: absolute; z-index: -1;" id="back-img" src="' . $imagen . '"> <span>' . "Concierto numero:" . $id_concierto . '</span><br> <span>' . $nombre . '</span><br><span>' . $fecha . '</span> <br> '
+                    . '<span>';
 
-                </table></div>
-        </div>
-        <div id="footer"><div id="footer1">
-                <span id="span">®Copyright algun nombre de empresa 2016</span><br>
-                <a href="faq.php">PREGUNTAS FRECUENTES</a><br></div>
-            <div id="footer2">correoelectronico: pene@gmail.com<br>
-                nº de contacto: 661883344 <br></div>
-        </div>
-    </body>
+                    $_SESSION["tipo"] = "musico";
+                    $_SESSION["user"] = "manelelmusico";
+
+                    if (isset($_SESSION["tipo"])) {
+
+                        if ($_SESSION["tipo"] == "musico") {
+
+                            if (verificarasis($_SESSION["user"], $id_concierto) == true) {
+
+                                echo 'Estas inscrito';
+                                echo '<form action="" method="post"> <input type="hidden" name="concierto" value="' . $id_concierto . '"> <input type="submit" name="Desinscribirse" value="Desinscribirse               "></form>';
+                            } else {
+                                echo '<form action="" method="post"> <input type="hidden" name="concierto" value="' . $id_concierto . '"> <input type="submit" name="Inscribirse" value="Inscribirse                     "></form>';
+                            }
+                        }
+                    }
+                    echo '</div>';
+                }
+                ?>
+
+                <!--para poner comentarios-->
+
+            </div></div>
+    </div>
+    <div id="footer"><div id="footer1">
+            <span id="span">®Copyright algun nombre de empresa 2016</span><br><br></div>
+        <div id="footer2">correoelectronico: hola@gmail.com<br>
+            nº de contacto: 661883344 <br></div>
+    </div>
+</body>
 </html>
