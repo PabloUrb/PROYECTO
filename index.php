@@ -93,7 +93,7 @@ and open the template in the editor.
 
     </div>
 
-    <div id="alto"><h1>Ranking Conciertos</h1>
+    <div id="alto">
         <div id="uno"><table id="tabla12">
 
                 <?php

@@ -8,12 +8,12 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link href="votar.css" rel="stylesheet" type="text/css"/>
-        <title>R CONCIERTO</title>
+        <title>VOTAR MUSICO</title>
     </head>
 
 
     <body>
-        <div id="tituloss"><h1>Vota el concierto si te ha gustado</h1>
+        <div id="tituloss" style="text-align: center"><h1>Vota el concierto si te ha gustado</h1>
             <?php
             session_start();
             $_SESSION["user"] = "f";

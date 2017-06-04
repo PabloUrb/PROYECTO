@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -11,7 +8,7 @@ and open the template in the editor.
         <title>VOTAR MUSICO</title>
     </head>
     <body>
-        <div id="votar1"><h1>Vota el concierto si te ha gustado</h1>
+        <div id="votar1" style="text-align: center"><h1 id="tituloss">Vota el concierto si te ha gustado</h1>
             <?php
             require_once 'php/fun.php';
             session_start();
@@ -25,11 +22,8 @@ and open the template in the editor.
                 $query2 = array_shift(mysqli_fetch_array($query));
                 ?>
             </div>
-
-
             <?php
             require_once 'php/fun.php';
-
             if (isset($_POST["boton1"])) {
                 //$user = $_SESSION["user"];
                 $user = "d";
@@ -41,7 +35,6 @@ and open the template in the editor.
                     echo "<script>alert('ya has votado')</script>";
                 }
             }
-
             foreach ($query as $key => $value) {
                 extract($value);
                 $suma = suma($id_concierto);
@@ -60,8 +53,6 @@ and open the template in the editor.
                 ' . "descripción: " . $desc . '<br>' . "Ciudad: " . $id_ciudad . '<br>'
                 . 'puntos: ' . $suma . '</p>';
                 echo "</form>";
-
-
                 echo'	</div>
 		</div>';
             }

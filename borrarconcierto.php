@@ -8,12 +8,11 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link href="borrar.css" rel="stylesheet" type="text/css"/>
-        <title>Borrar concierto</title>
+        <title>BORRAR CONCIERTO</title>
     </head>
-    <body><div>
+    <body><div id="tituloss">
             <?php
             session_start();
-            $_SESSION["user"] = "b";
             if (isset($_SESSION["user"])) {
                 
                 // Cogemos la variable de sesión y saludamos al usuario
@@ -32,7 +31,6 @@ and open the template in the editor.
                     echo "<form action='' method='POST'>";
                     echo "Escoge el concierto que quieras borrar: ";
                     echo "<select name='concierto'>";
-                    
                     $conciertos = selectAllConciertos($username);
                 
                     foreach ($conciertos as $key => $value) {
